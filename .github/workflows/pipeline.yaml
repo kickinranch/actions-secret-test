@@ -1,5 +1,6 @@
 name: 'Static Analysis + Unit + Integration'
 on:
+  pull_request_target:
   workflow_dispatch:
   push:
   pull_request:
