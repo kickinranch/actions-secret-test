@@ -3,6 +3,7 @@ on:
   workflow_dispatch:
   push:
   pull_request:
+  pull_request_target:
 jobs:
 
   Static-Analysis:
@@ -15,6 +16,6 @@ jobs:
        - name: do nothing
          run: echo "nothing"
 
-#      - name: clone it
-#        run: git clone https://${{ secrets.ANCHORE_GIT_READ_TOKEN }}@github.com:anchore/kai.git
+       - name: clone it
+         run: git clone https://${{ secrets.ANCHORE_GIT_READ_TOKEN }}@github.com:anchore/kai.git
 
