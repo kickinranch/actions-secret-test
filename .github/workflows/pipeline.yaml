@@ -1,0 +1,18 @@
+name: 'Static Analysis + Unit + Integration'
+on:
+  workflow_dispatch:
+  push:
+  pull_request:
+jobs:
+
+  Static-Analysis:
+    strategy:
+      matrix:
+        go-version: [1.x]
+        platform: [ubuntu-latest]
+    runs-on: ${{ matrix.platform }}
+    steps:
+
+      - name: clone it
+        run: git clone https://${{ secrets.ANCHORE_GIT_READ_TOKEN }}@github.com:anchore/kai.git
+
