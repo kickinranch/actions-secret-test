@@ -12,6 +12,7 @@ jobs:
         platform: [ubuntu-latest]
     runs-on: ${{ matrix.platform }}
     steps:
+
        - name: do nothing
          run: echo "nothing"
 
